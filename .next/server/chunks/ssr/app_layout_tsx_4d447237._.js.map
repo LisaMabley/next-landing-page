@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/lcm/Documents/local-repos/next-landing-page/app/layout.tsx"],"sourcesContent":["import { Metadata } from 'next'\n\nexport const metadata: Metadata = {\n  title: 'Your Site Name',\n  description: 'Your site description',\n} "],"names":[],"mappings":";;;AAEO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;AACf","debugId":null}}]
+}
