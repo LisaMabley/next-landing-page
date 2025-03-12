@@ -29,12 +29,14 @@ export const ParticleBackground = (): React.ReactElement => {
   const options: ISourceOptions = useMemo(
     () => ({
       background: {
+        image: "url('/images/space.jpg')",
         color: {
-          value: "#0d47a1",
+          value: "#ffffff",
         },
       },
       fpsLimit: 120,
       interactivity: {
+        detect_on: "window",
         events: {
           onClick: {
             enable: true,
@@ -42,15 +44,16 @@ export const ParticleBackground = (): React.ReactElement => {
           },
           onHover: {
             enable: true,
-            mode: "repulse",
+            mode: "bubble",
           },
         },
         modes: {
           push: {
             quantity: 4,
           },
-          repulse: {
-            distance: 200,
+          bubble: {
+            distance: 100,
+            size: 40,
             duration: 0.4,
           },
         },
@@ -61,9 +64,9 @@ export const ParticleBackground = (): React.ReactElement => {
         },
         links: {
           color: "#ffffff",
-          distance: 150,
+          distance: 90,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.25,
           width: 1,
         },
         move: {
@@ -73,20 +76,26 @@ export const ParticleBackground = (): React.ReactElement => {
             default: OutMode.out,
           },
           random: false,
-          speed: 6,
+          speed: 1,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 190,
         },
         opacity: {
           value: 0.5,
         },
         shape: {
-          type: "circle",
+            type: "polygon",
+            stroke: {
+                width: 0,
+            },
+            polygon: {
+                nb_sides: 6
+            },
         },
         size: {
           value: { min: 1, max: 5 },

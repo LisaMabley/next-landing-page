@@ -47,12 +47,14 @@ const ParticleBackground = ()=>{
     const options = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "ParticleBackground.useMemo[options]": ()=>({
                 background: {
+                    image: "url('/images/space.jpg')",
                     color: {
-                        value: "#0d47a1"
+                        value: "#ffffff"
                     }
                 },
                 fpsLimit: 120,
                 interactivity: {
+                    detect_on: "window",
                     events: {
                         onClick: {
                             enable: true,
@@ -60,15 +62,16 @@ const ParticleBackground = ()=>{
                         },
                         onHover: {
                             enable: true,
-                            mode: "repulse"
+                            mode: "bubble"
                         }
                     },
                     modes: {
                         push: {
                             quantity: 4
                         },
-                        repulse: {
-                            distance: 200,
+                        bubble: {
+                            distance: 100,
+                            size: 40,
                             duration: 0.4
                         }
                     }
@@ -79,9 +82,9 @@ const ParticleBackground = ()=>{
                     },
                     links: {
                         color: "#ffffff",
-                        distance: 150,
+                        distance: 90,
                         enable: true,
-                        opacity: 0.5,
+                        opacity: 0.25,
                         width: 1
                     },
                     move: {
@@ -91,20 +94,26 @@ const ParticleBackground = ()=>{
                             default: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tsparticles$2f$engine$2f$browser$2f$Enums$2f$Modes$2f$OutMode$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OutMode"].out
                         },
                         random: false,
-                        speed: 6,
+                        speed: 1,
                         straight: false
                     },
                     number: {
                         density: {
                             enable: true
                         },
-                        value: 80
+                        value: 190
                     },
                     opacity: {
                         value: 0.5
                     },
                     shape: {
-                        type: "circle"
+                        type: "polygon",
+                        stroke: {
+                            width: 0
+                        },
+                        polygon: {
+                            nb_sides: 6
+                        }
                     },
                     size: {
                         value: {
@@ -123,7 +132,7 @@ const ParticleBackground = ()=>{
             options: options
         }, void 0, false, {
             fileName: "[project]/app/components/ParticleBackground.tsx",
-            lineNumber: 102,
+            lineNumber: 111,
             columnNumber: 7
         }, this);
     }
